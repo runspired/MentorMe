@@ -1,17 +1,22 @@
-<h2>Tap Master</h2>
-<h3>I am This Mad: {{madness}}</h3>
 <page>
-  <hbox>
-    <box>
-      <div class="spinner"></div>
+  <box fit class="spinner-group">
+    <div class="spinner spinner-left"></div>
+    <div class="spinner spinner-left"></div>
+    <div class="spinner spinner-right"></div>
+    <div class="spinner spinner-right"></div>
+  </box>
+
+  <box>
+    <box align="center">
+      <h3>I'm {{userAnger}}</h3>
     </box>
-    <box>
-      <div {{action "beMad"}}>
-        Don't Touch Me
+    <box align="center">
+      I would go {{rounded}} miles to get away from this.
+    </box>
+    <centered>
+      <div class="button" {{action "beMad"}}>
+        I can't even
       </div>
-    </box>
-    <box>
-      <div class="spinner"></div>
-    </box>
-  </hbox>
+    </centered>
+  </box>
 </page>
