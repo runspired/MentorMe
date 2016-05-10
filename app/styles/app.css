@@ -3,7 +3,7 @@
 /*
 *  Basic Reset
 */
- 
+
 *,
 *:after,
 *:before {
@@ -50,9 +50,9 @@ h2 {
 /**
  * Helpers
  */
-.border-tlr-radius { 
+.border-tlr-radius {
 	border-top-left-radius: 2px;
-	border-top-right-radius: 2px; 
+	border-top-right-radius: 2px;
 }
 
 .text-center { text-align: center; }
@@ -64,9 +64,9 @@ h2 {
 .shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
 
 .shadowDepth1 {
-   box-shadow: 
+   box-shadow:
   		0 1px 3px rgba(0,0,0, 0.12),
-    	0 1px 2px rgba(0,0,0, 0.24);      
+    	0 1px 2px rgba(0,0,0, 0.24);
 }
 
 
@@ -82,7 +82,7 @@ h2 {
 .card__padding {
 	padding: 1.6rem;
 }
- 
+
 .card__image {
 	min-height: 100px;
 	background-color: #eee;
@@ -121,7 +121,7 @@ h2 {
 	padding-left: 1.6rem;
 	padding-bottom: 1.6rem;
 }
-	 
+
 .card__author {}
 
 	.card__author img,
@@ -182,13 +182,13 @@ h2 {
 	transition: all 0.3s ease;
 	outline: 0;
 
-	box-shadow: 
+	box-shadow:
 	  		0 2px 4px rgba(0,0,0, 0.12),
 	    	0 2px 4px rgba(0,0,0, 0.24);
 }
 	.share-icon:hover,
 	.share-icon:focus {
-		box-shadow: 
+		box-shadow:
 	  		0 3px 6px rgba(0,0,0, 0.12),
 	    	0 3px 6px rgba(0,0,0, 0.24);
 
@@ -200,10 +200,10 @@ h2 {
 	}
 
 .facebook {
-	background-color: #3b5998; 
+	background-color: #3b5998;
 }
 .twitter {
-	background-color: #00abe3; 
+	background-color: #00abe3;
 }
 .googleplus {
 	background-color: #d3492c;
@@ -401,4 +401,19 @@ box-shadow:         0px 5px 10px -5px rgba(0, 0, 0, 0.5);
 }
 .btn.danger {
     background-color: rgba(236, 112, 99, 0.8);
+}
+
+.spinner {
+  background: #f0f0f0 url('/images/propeller.svg') 25px 45px / 150px 150px no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 2px solid #d0d0d0;
+
+  /*
+  float: right;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  */
 }
