@@ -1,0 +1,14 @@
+.spinner {
+  background: #f0f0f0 url('/images/propeller.svg') 25px 45px / 150px 150px no-repeat;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 2px solid #d0d0d0;
+
+  /*
+  float: right;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  */
+}
