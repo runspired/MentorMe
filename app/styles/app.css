@@ -1,0 +1,404 @@
+@import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'http://fonts.googleapis.com/css?family=Roboto:700,400';
+/*
+*  Basic Reset
+*/
+ 
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/**
+ * Basics Styles
+ */
+html {
+	font-size: 62.5%;
+}
+body {
+	background-color: #eee;
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 1.6em;
+	line-height: 1.6;
+	color: #666;
+}
+
+a {
+	text-decoration: none;
+	color: #3498db;
+}
+	a:hover {
+		color: #2980b9;
+	}
+
+h2 {
+	line-height: 1.2;
+	margin-bottom: 1.6rem;
+}
+
+.wrapper {
+	max-width: 400px;
+	margin: 50px auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/**
+ * Helpers
+ */
+.border-tlr-radius { 
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px; 
+}
+
+.text-center { text-align: center; }
+
+.radius { border-radius: 2px; }
+
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+
+.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+
+.shadowDepth1 {
+   box-shadow: 
+  		0 1px 3px rgba(0,0,0, 0.12),
+    	0 1px 2px rgba(0,0,0, 0.24);      
+}
+
+
+/**
+ * Card Styles
+ */
+
+.card {
+	background-color: #fff;
+	margin-bottom: 1.6rem;
+}
+
+.card__padding {
+	padding: 1.6rem;
+}
+ 
+.card__image {
+	min-height: 100px;
+	background-color: #eee;
+}
+	.card__image img {
+		width: 100%;
+		max-width: 100%;
+		display: block;
+	}
+
+.card__content {
+	position: relative;
+}
+
+/* card meta */
+.card__meta time {
+	font-size: 1.5rem;
+	color: #bbb;
+	margin-left: 0.8rem;
+}
+
+/* card article */
+.card__article a {
+	text-decoration: none;
+	color: #444;
+	transition: all 0.5s ease;
+}
+	.card__article a:hover {
+		color: #2980b9;
+	}
+
+/* card action */
+.card__action {
+	overflow: hidden;
+	padding-right: 1.6rem;
+	padding-left: 1.6rem;
+	padding-bottom: 1.6rem;
+}
+	 
+.card__author {}
+
+	.card__author img,
+	.card__author-content {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.card__author img{
+		border-radius: 50%;
+		margin-right: 0.6em;
+	}
+
+.card__share {
+	float: right;
+	position: relative;
+	margin-top: -42px;
+}
+
+.card__social {
+	position: absolute;
+	top: 0;
+	right: 0;
+	visibility: hidden;
+	width: 160px;
+	transform: translateZ(0);
+  	transform: translateX(0px);
+  	transition: transform 0.35s ease;
+}
+	.card__social--active {
+		visibility: visible;
+		/*z-index: 3;*/
+		transform: translateZ(0);
+ 		transform: translateX(-48px);
+  		transition: transform 0.35s ease;
+	}
+
+.share-toggle {
+	z-index: 2;
+}
+.share-toggle:before {
+	content: "\f1e0";
+	font-family: 'FontAwesome';
+	color: #3498db;
+}
+	.share-toggle.share-expanded:before {
+		content: "\f00d";
+	}
+
+.share-icon {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: all 0.3s ease;
+	outline: 0;
+
+	box-shadow: 
+	  		0 2px 4px rgba(0,0,0, 0.12),
+	    	0 2px 4px rgba(0,0,0, 0.24);
+}
+	.share-icon:hover,
+	.share-icon:focus {
+		box-shadow: 
+	  		0 3px 6px rgba(0,0,0, 0.12),
+	    	0 3px 6px rgba(0,0,0, 0.24);
+
+	    -webkit-transform: scale(1.2);
+	    -moz-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	    -o-transform: scale(1.2);
+	    transform: scale(1.2);
+	}
+
+.facebook {
+	background-color: #3b5998; 
+}
+.twitter {
+	background-color: #00abe3; 
+}
+.googleplus {
+	background-color: #d3492c;
+}
+
+.facebook,
+.twitter,
+.googleplus {
+	color: #fff;
+}
+
+	.facebook:hover,
+	.twitter:hover,
+	.googleplus:hover {
+		color: #eee;
+	}
+
+
+body {
+    font: 12px "Helvetica";
+    background: url('http://thehill.com/sites/default/files/styles/article_full/public/blogs/trumpnydn_0.jpg?itok=6A9jM9vc');
+}
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+.container {
+    width: 320px;
+    background: #eeeeee;
+    overflow: hidden;
+    height: 435px;
+    margin: 50px auto;
+    position: relative;
+  -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+-moz-box-shadow:    0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+box-shadow:         0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.navigation {
+    background: #3E4858;
+}
+.navigation ul li {
+    border-bottom: 1px solid #323846;
+    border-top: 1px solid #515e72;
+}
+.navigation ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    overflow: hidden;
+    font: 17px 'Pathway Gothic One', sans-serif;
+}
+.cover {
+    background: url('http://immigrationexperts.pk/wp-content/uploads/2016/03/Canada-immigration.jpg') no-repeat center;
+    height: 180px;
+    border-bottom: 5px solid #ffffff;
+    position: relative;
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+}
+.cover .head {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.cover .head .menu {
+    background: url('http://dl.dropboxusercontent.com/s/zgj5vdngzkemvpe/list-icon.png') no-repeat center;
+    height: 32px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+.cover .head .menu.active,
+.cover .head .menu:hover {
+    opacity: 1;
+}
+.cover .avatar {
+    position: absolute;
+    background: #000;
+    border: 5px solid #ffffff;
+    cursor:pointer;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 5px 5px -5px rgba(50, 50, 50, 0.3);
+}
+.cover .avatar .light {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    top: -65px;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    left: 15px;
+    transform:rotate(-30deg);
+    -ms-transform:rotate(-30deg); /* IE 9 */
+    -webkit-transform:rotate(-30deg); /* Safari and Chrome */
+}
+
+.main {
+    padding: 60px 10px 10px;
+    text-align: center;
+}
+.main h1 {
+    font-weight: bold;
+    text-shadow: 0 -1px 0 #888888;
+    color: #cecece;
+    font-size: 30px;
+    margin-bottom: -3px;
+}
+.main h6 {
+    font: italic 16px "NotoSans";
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.main p {
+    font: 14px/18px "Arial";
+}
+.social {
+    margin: 10px 0 20px;
+    text-align: center;
+}
+.social ul li {
+    display: inline;
+}
+.social ul li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transition: all .5s;
+    -moz-transition: all .5s; /* Firefox 4 */
+    -webkit-transition: all .5s; /* Safari and Chrome */
+    -o-transition: all .5s; /* Opera */
+}
+.social ul li a.linkedin {
+    background: #39C url("http://migkapa.com/site/lab/css3hover/images/linked-icon.png") no-repeat center;
+}
+.social ul li a.twitter {
+    background: #019AD2 url("http://migkapa.com/site/lab/css3hover/images/twitter-icon.png") no-repeat center;
+}
+.social ul li a.facebook {
+    background: #3B5998 url("http://migkapa.com/site/lab/css3hover/images/facebook-icon.png") no-repeat center;
+}
+.social ul li a.dribbble {
+    background: #EA4C89 url("http://migkapa.com/site/lab/css3hover/images/dribble-icon.png") no-repeat center;
+}
+.social ul li a:hover {
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg); /* IE 9 */
+    -moz-transform:rotate(360deg); /* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari and Chrome */
+    -o-transform:rotate(360deg); /* Opera */
+}
+
+.btn {
+    border: none;
+    background: #bdc3c7;
+    color: #ffffff;
+    padding: 7px 0 6px;
+    line-height: 22px;
+    text-decoration: none;
+    text-shadow: none;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+.btn.success {
+    background-color: rgba(88, 214, 141, 0.7);
+}
+.btn.danger {
+    background-color: rgba(236, 112, 99, 0.8);
+}
