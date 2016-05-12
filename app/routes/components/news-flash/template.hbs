@@ -1,0 +1,18 @@
+<div class="news-flash" {{action "toggleVotingOn"}}>
+  <img src="{{data.photo}}">
+  <div class="content">
+    <box fit>
+      <h2>{{data.title}}</h2>
+      <span class="date">{{moment-from-now data.date}}</span>
+    </box>
+    <box>
+      <p>{{data.description}}</p>
+    </box>
+  </div>
+  {{#liquid-if isVoting use="scale"}}
+    {{vote-box story=data}}
+    <div class="close-button" {{action "toggleVotingOff" bubbles=false}}>
+      X
+    </div>
+  {{/liquid-if}}
+</div>

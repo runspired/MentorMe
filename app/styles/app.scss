@@ -1,3 +1,5 @@
+@import 'components/index';
+@import 'utils';
 /*
   @import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 */
@@ -403,65 +405,5 @@ h2 {
 }
 .btn.danger {
   background-color: rgba(236, 112, 99, 0.8);
-}
-
-body {
-  background: #302B54;
-  color: #fff;
-  font-family: "Helvetica Neue";
-}
-
-.button {
-  background: #FFA600;
-  border: 1px solid #fff;
-  padding: .5em 1em;
-  font-size: 1.2em;
-  border-radius: .25em;
-  margin: 2em auto;
-  cursor: pointer;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;
-}
-
-.spinner-group {
-  font-size: .5rem;
-  background: url('/images/plane.svg') center 30% / 100% auto no-repeat;
-  width: 100%;
-  padding: 0 0 40% 0;
-  height: 0;
-  position: relative;
-}
-
-.spinner {
-  font-size: 1em;
-  background: #f0f0f0 url('/images/propeller-orange.svg') 0.625em 1.125em / 3.75em 3.75em no-repeat;
-  width: 5em;
-  height: 5em;
-  border-radius: 100%;
-  border: 2px solid #d0d0d0;
-  display: block;
-  position: absolute;
-  top: 58.2%;
-}
-
-.spinner:nth-of-type(1) {
-  left: 24.4%;
-}
-
-.spinner:nth-of-type(2) {
-  left: 33.1%;
-}
-
-
-.spinner:nth-of-type(3) {
-  left: 60.25%;
-}
-
-.spinner:nth-of-type(4) {
-  left: 69.1%;
 }
 

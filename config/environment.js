@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'mentor-me',
+    podModulePrefix: 'mentor-me/routes',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
