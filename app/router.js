@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('drumpf');
   this.route('newsfeed');
+  this.route('menu');
 });
 
 export default Router;
